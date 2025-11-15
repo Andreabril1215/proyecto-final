@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- ====== DASHBOARD DE CONSUMO ====== -->
+    <section id="consumo" class="info-section">
+        <h1>Dashboard - Consumo de Energía Solar Mundial</h1>
+        <p>Visualización interactiva de la evolución del consumo de electricidad proveniente de la energía solar:</p>
+
+    </section>
+
+
+    <link rel="stylesheet" href="diseñot.css">
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Script -->
+    <script src="tablas.js" defer></script>
+</head>
+
+<body>
+
+    <header class="top">
+        <a class="volver" href="../Estructura_inicial/index.html">← Volver al inicio</a>
+    </header>
+
+    <section class="panel">
+        <label>Selecciona un país:</label>
+        <select id="selector"></select>
+    </section>
+
+    <section class="container">
+        <canvas id="barChart"></canvas>
+        <canvas id="pieChart"></canvas>
+    </section>
+
+    <section class="tabla-container">
+        <h2>Datos del país seleccionado</h2>
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Año</th>
+                    <th>Consumo Solar (TWh)</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+
+</body>
+</html>
