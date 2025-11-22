@@ -44,16 +44,11 @@ function actualizarDashboard(pais) {
 
     const max = filtrado.reduce((a, b) => (a.value > b.value ? a : b));
 
-    let variacion = 0;
-    if (filtrado[0].value > 0) {
-        variacion =
-            (((filtrado[filtrado.length - 1].value - filtrado[0].value) /
-                filtrado[0].value) * 100).toFixed(2);
-    }
+    
 
     document.getElementById("total").textContent = total + " TWh";
     document.getElementById("maxYear").textContent = `${max.year} (${max.value} TWh)`;
-    document.getElementById("variacion").textContent = variacion + "%";
+    
 
     actualizarLinea(filtrado);
 }

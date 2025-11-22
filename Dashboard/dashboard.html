@@ -2,7 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8" />
+    
     <title>Dashboard Energía Solar</title>
+    
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -25,6 +27,10 @@
             <p class="subtitulo">Análisis interactivo del consumo solar por país</p>
         </div>
     </div>
+    <button onclick="window.location.href='../Estructura_inicial/index.html'"
+        class="btn-volver">
+    ⬅ Volver a inicio
+</button>
 </header>
 
     <!-- Texto explicativo -->
@@ -53,11 +59,7 @@
             <h3>Año con Mayor Consumo</h3>
             <p id="maxYear" class="valor"></p>
         </div>
-
-        <div class="card">
-            <h3>Variación (%)</h3>
-            <p id="variacion" class="valor"></p>
-        </div>
+        
     </section>
 
     <!-- GRAFICAS -->
