@@ -7,13 +7,13 @@
     gap: 25px;
     padding: 20px 30px;
 
-    /* Fondo NUEVO más elegante y que contrasta con el logo negro */
+    /* Fondo NUEVO  */
     background: linear-gradient(90deg, #e6f4ea, #c8ebd3);
     
     border-bottom: 6px solid #0a662e;
     border-radius: 12px;
 
-    /* Para que se vea por encima de la capa translúcida */
+    /* encima de la capa translúcida */
     position: relative;
     z-index: 2;
 }
@@ -62,7 +62,7 @@ body {
     color: #333; /* color general del texto */
     scroll-behavior: smooth;
     background: url('fondo.png') no-repeat center center fixed; /* imagen de fondo */
-    background-size: cover; /* cubrir toda la pantalla */
+    background-size: cover; /* toda la pantalla */
     position: relative;
 }
 
@@ -93,7 +93,7 @@ footer {
 /* ====== TÍTULO PRINCIPAL ====== */
 .titulo-principal {
     text-align: center;
-    background: rgba(230, 244, 234, 0.8); /* fondo translúcido */
+    background: rgba(230, 244, 234, 0.8); /* fondo translúcido ojo */
     padding: 10px;
     color: #000b05;
 }
@@ -160,7 +160,7 @@ header nav ul li a:hover {
     position: relative;
     z-index: 2;
     padding: 30px;
-    background: rgba(0, 50, 10, 0.35); /* fondo translúcido */
+    background: rgba(0, 50, 10, 0.35); /* fondo translúcido ojo */
     border-radius: 15px;
     max-width: 600px;
 }
@@ -182,7 +182,7 @@ header nav ul li a:hover {
 
 /* ====== BENEFICIOS ====== */
 .benefits {
-    background: rgba(255,255,255,0.8); /* translúcido sobre la imagen */
+    background: rgba(255,255,255,0.8); /* translúcido ojo */
     padding: 50px 0;
     text-align: center;
     z-index: 1;
@@ -197,7 +197,7 @@ header nav ul li a:hover {
 }
 
 .card {
-    background-color: rgba(255,255,255,0.8); /* translúcido */
+    background-color: rgba(255,255,255,0.8); 
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
@@ -261,7 +261,7 @@ footer a:hover {
     color: #e0ffc2;
 }
 img[src="paneles.png"] {
-    width: 500px !important;   /* fuerza el tamaño */
+    width: 500px !important;  
     height: auto !important;
     display: block !important;
     margin: 20px auto !important;
@@ -284,13 +284,13 @@ img[src="paneles.png"] {
 }
 
 .columnas .texto h2 {
-    font-size: 2.2rem;   /* MÁS GRANDE */
+    font-size: 2.2rem;  
     font-weight: bold;
     color: #03140a;
 }
 
 .columnas .texto p {
-    font-size: 1.2rem;   /* MÁS GRANDE */
+    font-size: 1.2rem;   
     line-height: 1.6;
 }
 
@@ -303,8 +303,8 @@ img[src="paneles.png"] {
 
 /* AJUSTE DE LA IMAGEN (más grande) */
 .columnas img {
-    width: 90%;          /* MÁS GRANDE */
-    max-width: 450px;    /* AUMENTADO */
+    width: 90%;          
+    max-width: 450px;    
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
@@ -316,7 +316,7 @@ img[src="paneles.png"] {
     gap: 30px;
     padding: 20px 30px;
 
-    /* Fondo más oscuro para combinar con el logo */
+    /* Fondo más oscuro logo */
     background: linear-gradient(90deg, #0c110e, #0a662e);
 
     border-radius: 12px;
@@ -330,7 +330,7 @@ img[src="paneles.png"] {
     height: auto;
     border-radius: 6px;
 
-    /* Mantiene el borde negro natural del logo */
+    /*borde del logo */
     background: #10110f;
     padding: 4px;
 
@@ -347,11 +347,11 @@ img[src="paneles.png"] {
 .titulo-centro h1 {
     margin: 0;
     font-size: 4em;
-    color: #f2ffe8;  /* verde muy claro */
+    color: #f2ffe8;  
     font-weight: bold;
 }
 
-/* SUBTÍTULO — COLOR MÁS SUAVE PERO CLARO */
+/* SUBTÍTULO */
 .titulo-centro p {
     margin: 5px 0 0;
     font-size: 1.8em;

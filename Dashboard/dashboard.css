@@ -20,7 +20,7 @@ body {
     background: #013b09;
     color: white;
 
-    padding: 12px 10px;  /* Header compacto */
+    padding: 12px 10px;  
 
     box-shadow: 0 2px 4px #0003;
 }
@@ -30,9 +30,9 @@ body {
 /* ======== CONTENEDOR INTERNO DEL HEADER ======== */
 .header-flex {
     display: flex;
-    justify-content: center;    /* CENTRA el bloque del título */
+    justify-content: center;    
     align-items: center;
-    position: relative;          /* necesario para el logo */
+    position: relative;          
 }
 
 
@@ -41,7 +41,7 @@ body {
 .logoLeft {
     position: absolute;
     left: 30px;
-    width: 120px;        /* tamaño pequeño */
+    width: 120px;        
 }
 
 
@@ -52,13 +52,13 @@ body {
 }
 
 .titulo-centro h1 {
-    font-size: 33px;    /* tamaño reducido */
+    font-size: 33px;    
     margin: 0;
     font-weight: bold;
 }
 
 .titulo-centro .subtitulo {
-    font-size: 25px;    /* subtitulo más pequeño */
+    font-size: 25px;    
     opacity: 0.9;
     margin-top: 3px;
 }
