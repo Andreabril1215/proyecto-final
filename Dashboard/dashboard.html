@@ -1,52 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-
-    <!-- ====== DASHBOARD DE CONSUMO ====== -->
-    <section id="consumo" class="info-section">
-        <h1>Dashboard - Consumo de Energía Solar Mundial</h1>
-        <p>Visualización interactiva de la evolución del consumo de electricidad proveniente de la energía solar:</p>
-
-    </section>
-
-
-    <link rel="stylesheet" href="diseñot.css">
+    <meta charset="UTF-8" />
+    <title>Dashboard Energía Solar</title>
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+    <!-- Estilos -->
+    <link rel="stylesheet" href="dashboard.css">
+
     <!-- Script -->
-    <script src="tablas.js" defer></script>
+    <script src="dashboard.js" defer></script>
 </head>
 
 <body>
 
-    <header class="top">
-        <a class="volver" href="../Estructura_inicial/index.html">← Volver al inicio</a>
-    </header>
+    <header class="encabezado">
+    <div class="header-flex">
+        <img src="logo.png" class="logoLeft">
 
-    <section class="panel">
+        <div class="titulo-centro">
+            <h1>Dashboard – Energía Solar Mundial</h1>
+            <p class="subtitulo">Análisis interactivo del consumo solar por país</p>
+        </div>
+    </div>
+</header>
+
+    <!-- Texto explicativo -->
+    <section class="explicacion">
+        <p>
+            Este dashboard muestra la evolución del consumo de energía solar en diferentes países del mundo.
+            Selecciona un país para visualizar su tendencia anual, su consumo total, el año con mayor uso
+            y la variación general a lo largo del tiempo. Las tarjetas superiores resumen indicadores clave,
+            mientras que las gráficas permiten comparar los crecimientos y consumos recientes.
+        </p>
+    </section>
+
+    <section class="filtros">
         <label>Selecciona un país:</label>
         <select id="selector"></select>
     </section>
 
-    <section class="container">
-        <canvas id="barChart"></canvas>
-        <canvas id="pieChart"></canvas>
+    <!-- TARJETAS ESTILO POWER BI -->
+    <section class="cards">
+        <div class="card">
+            <h3>Total Consumo</h3>
+            <p id="total" class="valor"></p>
+        </div>
+
+        <div class="card">
+            <h3>Año con Mayor Consumo</h3>
+            <p id="maxYear" class="valor"></p>
+        </div>
+
+        <div class="card">
+            <h3>Variación (%)</h3>
+            <p id="variacion" class="valor"></p>
+        </div>
     </section>
 
-    <section class="tabla-container">
-        <h2>Datos del país seleccionado</h2>
-        <table id="tabla">
-            <thead>
-                <tr>
-                    <th>Año</th>
-                    <th>Consumo Solar (TWh)</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
+    <!-- GRAFICAS -->
+    <section class="graficas">
+        <div class="grafica">
+            <h2>Evolución del Consumo</h2>
+            <canvas id="lineChart"></canvas>
+        </div>
+
+        <div class="grafica">
+            <h2>Top Países (último año)</h2>
+            <canvas id="topChart"></canvas>
+        </div>
     </section>
 
 </body>

@@ -1,4 +1,60 @@
 /* ====== FONDO GENERAL ====== */
+
+/* CONTENEDOR GENERAL DEL TÍTULO */
+.titulo-con-logo {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 20px 30px;
+
+    /* Fondo NUEVO más elegante y que contrasta con el logo negro */
+    background: linear-gradient(90deg, #e6f4ea, #c8ebd3);
+    
+    border-bottom: 6px solid #0a662e;
+    border-radius: 12px;
+
+    /* Para que se vea por encima de la capa translúcida */
+    position: relative;
+    z-index: 2;
+}
+
+/* LOGO A LA IZQUIERDA */
+.logo-izquierda {
+    width: 120px;
+    height: auto;
+    border-radius: 6px;
+    background: #000; /* mantiene el fondo negro del logo */
+    padding: 4px;
+
+    box-shadow: 0 0 12px rgba(0,0,0,0.25);
+}
+
+/* CONTENEDOR DEL TÍTULO Y SUBTÍTULO, CENTRADOS */
+
+.titulo-centro h1 {
+    font-size: 9em;
+}
+
+.titulo-centro {
+    flex: 9;
+    text-align: center;
+}
+
+/* TÍTULO */
+.titulo-centro h1 {
+    margin: 0;
+    font-size: 4em;
+    font-weight: bold;
+    color: #0a662e;
+}
+
+/* SUBTÍTULO */
+.titulo-centro p {
+    margin: 5px 0 0 0;
+    font-size: 1.3em;
+    color: #06401c;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -251,4 +307,53 @@ img[src="paneles.png"] {
     max-width: 450px;    /* AUMENTADO */
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* CONTENEDOR DEL TÍTULO CON FONDO OSCURO */
+.titulo-con-logo {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 30px;
+
+    /* Fondo más oscuro para combinar con el logo */
+    background: linear-gradient(90deg, #0c110e, #0a662e);
+
+    border-radius: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+/* LOGO A LA IZQUIERDA */
+.logo-izquierda {
+    width: 180px;
+    height: auto;
+    border-radius: 6px;
+
+    /* Mantiene el borde negro natural del logo */
+    background: #10110f;
+    padding: 4px;
+
+    box-shadow: 0 0 10px rgba(15, 22, 16, 0.4);
+}
+
+/* TEXTO CENTRADO */
+.titulo-centro {
+    flex: 1;
+    text-align: center;
+}
+
+/* TÍTULO — TEXTO CLARO PARA CONTRASTE */
+.titulo-centro h1 {
+    margin: 0;
+    font-size: 4em;
+    color: #f2ffe8;  /* verde muy claro */
+    font-weight: bold;
+}
+
+/* SUBTÍTULO — COLOR MÁS SUAVE PERO CLARO */
+.titulo-centro p {
+    margin: 5px 0 0;
+    font-size: 1.8em;
+    color: #d2ffd9; 
 }

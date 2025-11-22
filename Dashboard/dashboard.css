@@ -1,0 +1,146 @@
+/* ======== ESTILOS GENERALES ======== */
+body {  
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f4f4f7;
+    padding-top: 110px;   
+}
+
+
+
+/* ======== ENCABEZADO FIJO ======== */
+.encabezado {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    z-index: 1000;
+
+    background: #013b09;
+    color: white;
+
+    padding: 12px 10px;  /* Header compacto */
+
+    box-shadow: 0 2px 4px #0003;
+}
+
+
+
+/* ======== CONTENEDOR INTERNO DEL HEADER ======== */
+.header-flex {
+    display: flex;
+    justify-content: center;    /* CENTRA el bloque del título */
+    align-items: center;
+    position: relative;          /* necesario para el logo */
+}
+
+
+
+/* ======== LOGO FIJO A LA IZQUIERDA ======== */
+.logoLeft {
+    position: absolute;
+    left: 30px;
+    width: 120px;        /* tamaño pequeño */
+}
+
+
+
+/* ======== BLOQUE CENTRADO DE TÍTULO Y SUBTÍTULO ======== */
+.titulo-centro {
+    text-align: center;
+}
+
+.titulo-centro h1 {
+    font-size: 33px;    /* tamaño reducido */
+    margin: 0;
+    font-weight: bold;
+}
+
+.titulo-centro .subtitulo {
+    font-size: 25px;    /* subtitulo más pequeño */
+    opacity: 0.9;
+    margin-top: 3px;
+}
+
+/* ======== SECCIÓN DE EXPLICACIÓN ======== */
+.explicacion {
+    max-width: 850px;
+    margin: 20px auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.5;
+    padding: 15px 20px;
+
+    background: #b5d8ac;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #0002;
+}
+
+
+
+/* ======== FILTROS ======== */
+.filtros {
+    margin: 20px;
+    text-align: center;
+}
+
+select {
+    padding: 8px 12px;
+    font-size: 16px;
+}
+
+
+
+/* ======== TARJETAS ======== */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 220px;
+    background: white;
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px #0002;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.valor {
+    font-size: 26px;
+    font-weight: bold;
+    color: #024222;
+    margin-top: 10px;
+}
+
+
+
+/* ======== GRÁFICAS ======== */
+.graficas {
+    display: flex;
+    justify-content: space-around;
+    margin: 30px;
+    flex-wrap: wrap;
+}
+
+.grafica {
+    width: 45%;
+    min-width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #0002;
+}
+
+.grafica h2 {
+    text-align: center;
+}
