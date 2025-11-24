@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <title>Calculadora de Consumo Energético</title>
+
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <link rel="stylesheet" href="calculadora.css">
+    <script src="calculadora.js" defer></script>
+</head>
+
+<body>
+
+    <header class="barra">
+        <h1>Calculadora Energética</h1>
+
+        <!-- BOTÓN VOLVER A PÁGINA PRINCIPAL -->
+        <a class="btn-volver" href="../index.html"> Volver </a>
+    </header>
+
+    <section class="contenedor">
+        <h2>Calcule su consumo</h2>
+
+        <label for="kwh">Ingrese su consumo mensual (kWh):</label>
+        <input type="number" id="kwh" placeholder="Ejemplo: 250">
+
+        <button onclick="resultado()">Calcular</button>
+    </section>
+
+</body>
+</html>
