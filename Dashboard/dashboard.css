@@ -188,3 +188,34 @@ select {
 .btn-volver:hover {
     background: #ffc444;
 }
+
+/* ======== TABLA ======== */
+.tabla-datos {
+    max-width: 700px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px #0002;
+}
+
+#tablaPais {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+#tablaPais th {
+    background: #024222;
+    color: white;
+    padding: 10px;
+}
+
+#tablaPais td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+#tablaPais tr:hover {
+    background: #e3f0e3;
+}

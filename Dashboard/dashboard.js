@@ -33,24 +33,24 @@ function cargarPaises() {
     });
 
     selector.addEventListener("change", () => actualizarDashboard(selector.value));
-    actualizarDashboard(paises[0]);
+    actualizarDashboard(paises[0]); // carga inicial
 }
 
-// Actualizar tarjetas + gráficas
+// Actualizar tarjetas + gráficas + tabla
 function actualizarDashboard(pais) {
-    const filtrado = data.filter(d => d.country === pais).sort((a, b) => a.year - b.year);
+    const filtrado = data
+        .filter(d => d.country === pais)
+        .sort((a, b) => a.year - b.year);
 
     const total = filtrado.reduce((s, d) => s + d.value, 0).toFixed(2);
 
     const max = filtrado.reduce((a, b) => (a.value > b.value ? a : b));
 
-    
-
     document.getElementById("total").textContent = total + " TWh";
     document.getElementById("maxYear").textContent = `${max.year} (${max.value} TWh)`;
-    
 
     actualizarLinea(filtrado);
+    actualizarTabla(filtrado); // ⭐ se añadió: llenar tabla correctamente
 }
 
 // Gráfica de evolución
@@ -108,4 +108,22 @@ function crearTopPaises() {
     });
 }
 
+// Tabla de datos del país seleccionado
+function actualizarTabla(datos) {
+    const cuerpo = document.querySelector("#tablaPais tbody");
+    cuerpo.innerHTML = "";
+
+    datos.forEach(d => {
+        const fila = document.createElement("tr");
+
+        fila.innerHTML = `
+            <td>${d.year}</td>
+            <td>${d.value}</td>
+        `;
+
+        cuerpo.appendChild(fila);
+    });
+}
+
+// Ejecutar carga inicial
 cargarDatos();
