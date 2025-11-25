@@ -6,6 +6,30 @@ body {
     padding-top: 110px;   
 }
 
+/* ======== FONDO TRANSLÚCIDO ======== */
+body {
+    background-image: url("fondo.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* capa transparente encima del fondo */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(255, 255, 255, 0.55); /* claridad/blancura del fondo */
+    backdrop-filter: blur(3px);            /* suaviza el fondo */
+
+    z-index: -1;  /* no afecta el contenido */
+}
+
 
 
 /* ======== ENCABEZADO FIJO ======== */

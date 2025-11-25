@@ -7,19 +7,27 @@
     <!-- SweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- Estilos y JS -->
     <link rel="stylesheet" href="calculadora.css">
     <script src="calculadora.js" defer></script>
 </head>
 
 <body>
 
+    <!-- ====== ENCABEZADO ====== -->
     <header class="barra">
-        <h1>Calculadora Energética</h1>
+        <div class="header-flex">
+            <h1>Calculadora Energética</h1>
 
-        <!-- BOTÓN VOLVER A PÁGINA PRINCIPAL -->
-        <a class="btn-volver" href="../index.html"> Volver </a>
+            <!-- BOTÓN VOLVER -->
+            <button onclick="window.location.href='../Estructura_inicial/index.html'" 
+                    class="btn-volver">
+                ⬅ Volver a inicio
+            </button>
+        </div>
     </header>
 
+    <!-- ====== CONTENIDO ====== -->
     <section class="contenedor">
         <h2>Calcule su consumo</h2>
 
