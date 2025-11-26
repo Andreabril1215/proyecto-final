@@ -1,50 +1,48 @@
-function resultado(){
+function resultado() {
 
     const valor = document.getElementById("kwh").value;
 
-    const cov= parseFloat(valor)
-
-    const twh= convierte_twh(cov)
-
-    const porcent=58.19
-
-    const porcentaje= ((twh*100)/porcent).toFixed(4)
-
-    const res="Su consumo promedio mensual fue de "+valor+"kwh, lo cual es quivalente al "+ porcentaje+"% a la totalidad connsumida de la fuente hidrica producida en el pais Colombiano con respecto al año 2021";
-
-
-    if(valor != ""){
-
-        Swal.fire({
-            title: 'excelente',
-            text: res,
-            icon: 'success',
-            confirmButtonText: '¡Interesante!'
-        })
-
-        limpia()
-
-    }else{
-
+    if (valor === "" || parseFloat(valor) <= 0) {
         Swal.fire({
             title: '¡Error!',
-            text: 'no hay datos ingresados',
+            text: 'Debe ingresar un valor válido.',
             icon: 'error',
-            confirmButtonText: 'Close'
-        })
-
+            confirmButtonText: 'Cerrar'
+        });
+        return;
     }
-    
+
+    const consumoMensual = parseFloat(valor);
+
+    // --- 1. Consumo anual ---
+    const consumoAnual_kWh = consumoMensual * 12;
+
+    // --- 2. Convertir a TWh ---
+    const consumoAnual_TWh = consumoAnual_kWh / 1_000_000_000;
+
+    // --- 3. Valor del listado (archivo CSV): energía solar Colombia 2021 ---
+    const solarColombia2021_TWh = 0.32;
+
+    // --- 4. Porcentaje respecto al listado ---
+    const porcentaje = ((consumoAnual_TWh / solarColombia2021_TWh) * 100).toFixed(6);
+
+    // --- 5. Mensaje final (incluye consumo anual) ---
+    const res =
+        "Su consumo promedio mensual es de " + consumoMensual + " kWh, " +
+        "equivalente a un consumo anual de " + consumoAnual_kWh + " kWh. " +
+        "Este valor representa el " + porcentaje +
+        "% de la energía solar generada en Colombia durante el año 2021.";
+
+    Swal.fire({
+        title: 'Resultado',
+        text: res,
+        icon: 'success',
+        confirmButtonText: 'Aceptar'
+    });
+
+    limpia();
 }
 
-function convierte_twh(dato){
-
-    return (dato/1000)*12
-
-}
-
-function limpia(){
-
-    document.getElementById("kwh").value=""
-
+function limpia() {
+    document.getElementById("kwh").value = "";
 }
